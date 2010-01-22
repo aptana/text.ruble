@@ -32,6 +32,7 @@ END
     end
     main_menu.separator
     main_menu.command 'Delete Line'
+    main_menu.command 'Delete to Beginning of Line'
     main_menu.command 'Duplicate Line / Selection'
     main_menu.command 'Join Lines'
     main_menu.separator
