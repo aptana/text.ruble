@@ -1,9 +1,10 @@
 require 'radrails'
-# FIXME Convert perl execution to ruby regex replacement
+
 command 'Remove Trailing Spaces in Document / Selection' do |cmd|
   cmd.output = :replace_selection
   cmd.input = :selection, :document
-  cmd.invoke =<<-EOF
-perl -pe 's/[\t ]+$//g'
-EOF
+  cmd.invoke do
+    STDIN.readlines.each {|l| print l.sub(/[\t ]+$/, '') }
+    nil
+  end
 end
