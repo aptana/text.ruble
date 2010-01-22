@@ -31,7 +31,7 @@ END
       submenu.command 'Randomize Lines in Document / Selection'
     end
     main_menu.separator
-    main_menu.command 'FB8960DB-AA2E-11D9-8E27-000D93589AF6'
+    main_menu.command 'Delete Line'
     main_menu.command 'Duplicate Line / Selection'
     main_menu.command '3D7504EE-B927-4D3D-A3CC-BFB189027EE7'
     main_menu.separator
