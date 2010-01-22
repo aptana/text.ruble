@@ -1,5 +1,5 @@
 require 'radrails'
-
+# FIXME Won't work on Windows
 command 'Speak Document / Selection' do |cmd|
   cmd.output = :discard
   cmd.input = :selection

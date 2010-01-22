@@ -1,5 +1,5 @@
 require 'radrails'
-
+# FIXME Won't work on Windows
 command 'Randomize Lines in Document / Selection' do |cmd|
   cmd.output = :replace_selection
   cmd.input = :selection
