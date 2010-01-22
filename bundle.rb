@@ -33,7 +33,7 @@ END
     main_menu.separator
     main_menu.command 'Delete Line'
     main_menu.command 'Duplicate Line / Selection'
-    main_menu.command '3D7504EE-B927-4D3D-A3CC-BFB189027EE7'
+    main_menu.command 'Join Lines'
     main_menu.separator
     main_menu.command 'Add Line Numbers to Document / Selection'
     main_menu.command 'Statistics for Document / Selection (Word Count)'
