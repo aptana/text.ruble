@@ -1,11 +1,15 @@
-snippet 'Copyright Notice' do |s|
+command 'Copyright Notice' do |s|
   s.trigger = 'c)'
-  s.expansion = '(c) Copyright `date +%Y` $TM_FULLNAME. All Rights Reserved. '
+  s.input = :none
+  s.output = :insert_as_snippet
+  s.invoke { "(c) Copyright #{Time.now.year} #{ENV['TM_FULLNAME']}. All Rights Reserved. " }
 end
 
-snippet 'Current Date - YYYY-MM-DD' do |s|
+command 'Current Date - YYYY-MM-DD' do |s|
   s.trigger = 'isoD'
-  s.expansion = '`date +%Y-%m-%d`'
+  s.input = :none
+  s.output = :insert_as_snippet
+  s.invoke { Time.now.strftime('%Y-%m-%d') }
 end
 
 snippet 'Lorem ipsum' do |s|
