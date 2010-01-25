@@ -2,31 +2,13 @@ require 'radrails'
 
 command 'Distill Document / Selection' do |cmd|
   cmd.output = :replace_selection
-  cmd.input = :selection
-  cmd.invoke =<<-EOF
-res=$(ruby -rui -e"print TextMate::UI.request_string(:title => 'Distill Text', :prompt => 'Enter a pattern:', :button1 => 'Filter', :button2 => 'Cancel').to_s")
-
-[[ -z "$res" ]] && exit_discard
-export pattern="$res"
-
-# This could be done with grep, but Python's RE is closer to oniguruma
-"${TM_PYTHON:-python}" -c '
-import sys, os, re, traceback
-try:
-  pattern = re.compile(os.environ["pattern"])
-except re.error, e:
-  sys.stderr.write("Invalid pattern: %s" % e)
-  sys.exit(1)
-mate = "\"%s/bin/mate\" -a" % os.environ["TM_SUPPORT_PATH"]
-pb = os.popen(mate, "w")
-for line in sys.stdin:
-  if pattern.search(line):
-    pb.write(line)
-  else:
-    sys.stdout.write(line)
-pb.close()
-' || exit_show_tool_tip
-
-
-EOF
+  cmd.input = :document
+  cmd.invoke do |context|
+    res = RadRails::UI.request_string(:title => 'Distill Text', :prompt => 'Enter a pattern:', :button1 => 'Filter', :button2 => 'Cancel')
+    context.exit_discard unless res
+    res = res.to_s    
+    # FIXME Not sure, but looks like the original command sent matching lines to a new file, and replaced existing doc with non-matching...
+    STDIN.readlines.each {|line| puts line if line.match(res) }
+    nil
+  end
 end
