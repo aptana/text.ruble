@@ -4,6 +4,7 @@ def pretty(number)
   number.to_s.gsub(/\d{1,3}(?=\d{3}+(?!\d))/, '\0,')
 end
 # FIXME Tooltip isn't showing properly when input is selection...
+# FIXME Won't work on windows
 command 'Statistics for Document / Selection (Word Count)' do |cmd|
   cmd.key_binding = 'CONTROL+M2+N'
   cmd.output = :show_as_tooltip
