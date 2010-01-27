@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 # FIXME This probably won't work on windows
 command 'Transliterate Word / Selection to ASCII' do |cmd|

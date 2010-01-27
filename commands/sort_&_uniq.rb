@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 # FIXME used to run "sort -f" which sorts things like [ after a-z, but ruby sorts before a-z
 command 'Sort Lines & Remove Duplicates' do |cmd|
   cmd.key_binding = 'F5'

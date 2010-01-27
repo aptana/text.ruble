@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 command 'Remove Unprintable Characters in Document / Selection' do |cmd|
   cmd.output = :replace_selection

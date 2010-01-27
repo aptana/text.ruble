@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 def pretty(number)
   number.to_s.gsub(/\d{1,3}(?=\d{3}+(?!\d))/, '\0,')

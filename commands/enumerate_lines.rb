@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 command 'Add Line Numbers to Document / Selection' do |cmd|
   cmd.output = :replace_selection

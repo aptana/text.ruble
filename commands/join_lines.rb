@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 require 'escape'
 
 command 'Join Lines' do |cmd|

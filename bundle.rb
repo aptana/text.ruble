@@ -1,5 +1,5 @@
 require 'java'
-require 'radrails'
+require 'ruble'
 
 bundle 'Text' do |bundle|
   bundle.author = 'Allan Odgaard'

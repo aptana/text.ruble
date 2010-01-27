@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 require 'escape'
 
 command 'Duplicate Line / Selection' do |cmd|

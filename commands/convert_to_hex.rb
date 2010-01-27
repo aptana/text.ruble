@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 command 'Convert Character / Selection to Hex' do |cmd|
   cmd.key_binding = 'CONTROL+M2+X'

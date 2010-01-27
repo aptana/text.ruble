@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
     
 command 'Move to EOL and Insert "." + LF' do |cmd|
   cmd.key_binding = 'SHIFT+COMMAND+ENTER'
