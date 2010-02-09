@@ -7,7 +7,7 @@ bundle 'Text' do |bundle|
   bundle.description =  <<END
 The text bundle has a lot of support for plain text and is a requisite for working with text.
 END
-  bundle.repository = "git://github.com/aptana/text-ruble.git"
+  bundle.repository = "git://github.com/aptana/text.ruble.git"
    
   bundle.menu 'Text' do |main_menu|
     main_menu.menu 'Converting / Stripping' do |submenu|
