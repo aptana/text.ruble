@@ -2,9 +2,11 @@ require 'java'
 require 'ruble'
 
 bundle 'Text' do |bundle|
-  bundle.author = 'Allan Odgaard'
-  bundle.contact_email_rot_13 = 'gz-ohaqyrf@znpebzngrf.pbz'
+  bundle.author = 'Christopher Williams'
+  bundle.copyright = "© Copyright 2010 Aptana Inc. Distributed under the MIT license."
   bundle.description =  <<END
+A port of the TextMate bundle.
+
 The text bundle has a lot of support for plain text and is a requisite for working with text.
 END
   bundle.repository = "git://github.com/aptana/text.ruble.git"
