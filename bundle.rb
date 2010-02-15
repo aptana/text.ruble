@@ -12,6 +12,10 @@ END
   bundle.repository = "git://github.com/aptana/text.ruble.git"
    
   bundle.menu 'Text' do |main_menu|
+    main_menu.menu 'Font' do |font_menu|
+      font_menu.command 'Bigger'
+      font_menu.command 'Smaller'
+    end
     main_menu.menu 'Converting / Stripping' do |submenu|
       submenu.command 'Convert Character / Selection to Hex'
       submenu.command 'Remove Trailing Spaces in Document / Selection'
