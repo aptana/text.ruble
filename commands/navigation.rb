@@ -1,3 +1,5 @@
+require 'ruble'
+
 command "Previous Editor" do |cmd|
   cmd.key_binding = "CTRL+SHIFT+TAB"
   cmd.output = :discard
