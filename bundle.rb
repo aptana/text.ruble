@@ -37,10 +37,6 @@ END
       submenu.separator
       submenu.command 'Randomize Lines in Document / Selection'
     end
-    main_menu.menu 'Navigation' do |submenu|
-      submenu.command 'Next Editor'
-      submenu.command 'Previous Editor'
-    end
     main_menu.separator
     main_menu.command 'Delete Line'
     main_menu.command 'Delete to Beginning of Line'
