@@ -1,9 +1,10 @@
 require 'java'
 require 'ruble'
 
-bundle 'Text' do |bundle|
+bundle do |bundle|
   bundle.author = 'Christopher Williams'
   bundle.copyright = "© Copyright 2010 Aptana Inc. Distributed under the MIT license."
+  bundle.display_name =  'Text'
   bundle.description =  <<END
 A port of the TextMate bundle.
 
