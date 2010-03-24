@@ -9,4 +9,17 @@ command 'Speak Document / Selection' do |cmd|
     job.schedule
     nil
   end
+ cmd.invoke.windows do
+   say_command = "cmd /Q /C \"\"#{ENV['TM_BUNDLE_SUPPORT']}\\say\" "
+   if ENV['TM_SELECTED_TEXT']
+     # We have a selection
+     say_command += "\"#{ENV['TM_SELECTED_TEXT']}\"\""
+   else
+     # Say the entire file
+     say_command += "\"#{ENV['TM_SELECTED_FILE']}\" true\""
+   end
+   job = Ruble::Job.new("Speaking..."){ `"#{say_command}"` }
+   job.schedule
+   nil
+ end
 end
