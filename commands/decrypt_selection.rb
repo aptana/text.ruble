@@ -5,6 +5,7 @@ command 'AES Decrypt Document / Selection With Password...' do |cmd|
   cmd.key_binding = 'CONTROL+SHIFT+COMMAND+E'
   cmd.output = :replace_selection
   cmd.input = :selection, :document
+  cmd.invoke.windows = ""
   cmd.invoke do
     pw = Ruble::UI.request_secure_string(:title => 'Decrypt AES 128 Encrypted Text', :prompt => 'What is the password?', :button1 => 'Decrypt', :button2 => 'Cancel').to_s
     context.exit_discard if pw.nil? or pw.strip.length == 0
