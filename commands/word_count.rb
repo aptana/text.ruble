@@ -9,6 +9,7 @@ command 'Statistics for Document / Selection (Word Count)' do |cmd|
   cmd.key_binding = 'CONTROL+M2+N'
   cmd.output = :show_as_tooltip
   cmd.input = :selection, :document
+  cmd.invoke.windows = ""
   cmd.invoke do
     counts = IO.popen('wc -lwc', 'r+') { |io| io.write STDIN.read; io.close_write; io.read }.scan(/\d+/)
     counts[0] = counts[0].to_i + 1 # increase one to the line count
