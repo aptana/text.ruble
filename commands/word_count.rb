@@ -13,7 +13,7 @@ command 'Statistics for Document / Selection (Word Count)' do |cmd|
    lines = words = bytes = 0
    
    loop do
-    data = (STDIN.read(4096) or break) << (STDIN.gets || "")
+    data = ($stdin.read(4096) or break) << ($stdin.gets || "")
     bytes += data.length
     lines += data.count("\n")
     ((data.strip! || data).gsub!(/[\n\r]/, " ") || data).squeeze!

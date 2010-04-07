@@ -5,6 +5,6 @@ command 'Sort Lines in Document / Selection' do |cmd|
   cmd.output = :replace_selection
   cmd.input = :selection, :document
   cmd.invoke do 
-    STDIN.readlines.sort {|a,b| a.downcase <=> b.downcase }.join("")
+    $stdin.readlines.sort {|a,b| a.downcase <=> b.downcase }.join("")
   end
 end
