@@ -1,3 +1,31 @@
+module Ruble
+  class UI
+    # TODO Allow tests to queue up strings to return
+    def self.add_string_for_request(string)
+      @@strings ||= []
+      @@strings << string
+    end
+    
+    def self.request_string(hash = {})
+      @@strings ||= []
+      @@strings.shift
+    end
+  end
+end
+
+class CommandContext
+  attr_accessor :output
+  
+  def initialize
+    @output = :undefined
+  end
+  
+  def exit_discard
+    @output = :discard
+    exit(1)
+  end
+end
+
 class Command
   def initialize(name)
     @name = name
@@ -20,15 +48,21 @@ class Command
     end
   end
   
-  def execute(input)
+  def execute(input, context = CommandContext.new)
     if invoke.kind_of? Proc
       require 'stringio'
       
       block = invoke
       $stdin = StringIO.new(input || "")
-      $stdout = StringIO.new("")
-      result = block.call || $stdout.string
-      result
+      $stdout = StringIO.new
+      context.output = output.first if context
+      begin
+        result = block.call(context)
+        result || $stdout.string
+      rescue SystemExit => e
+        # TODO Save the exit code?
+        nil
+      end
     else
       # This command has a shell script for the invoke, so we need to run that
       # Create tmpfile with the contents of cmd.invoke
