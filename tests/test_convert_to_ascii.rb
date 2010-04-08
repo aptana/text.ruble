@@ -1,20 +1,14 @@
-require 'test/unit'
+require 'command_testcase'
 require 'convert_to_ascii'
 
-class ConvertToAsciiTest < Test::Unit::TestCase
+class ConvertToAsciiTest < CommandTestCase
   
-  def setup
-    @cmd = $commands["Transliterate Word / Selection to ASCII"]
-    @context = CommandContext.new
-  end
-  
-  def teardown
-    @cmd = nil
-    @context = nil
+  def command_name
+    "Transliterate Word / Selection to ASCII"
   end
   
   def test_thing
-    assert_equal("hello world!\n", @cmd.execute("hello world!", @context))
-    assert_equal(:replace_selection, @context.output)
+    assert_equal("hello world!\n", execute("hello world!"))
+    assert_output_type(:replace_selection)
   end
 end

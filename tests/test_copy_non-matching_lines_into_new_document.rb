@@ -8,8 +8,8 @@ class CopyNonMatchingLinesIntoNewDocumentTest < CommandTestCase
   end
   
   def test_nil
-    assert_equal(nil, cmd.execute("", context))
-    assert_equal(:discard, context.output)
+    assert_equal(nil, execute(""))
+    assert_output_type(:discard)
   end
   
   def test_pattern
@@ -26,7 +26,7 @@ EOL
 Bogus!
 EOL
     Ruble::UI.add_string_for_request("Th*")
-    assert_equal(expected, cmd.execute(input, context)) 
-    assert_equal(:create_new_document, context.output)  
+    assert_equal(expected, execute(input)) 
+    assert_output_type(:create_new_document)  
   end
 end

@@ -12,7 +12,7 @@ class StripTrailingSpaces < CommandTestCase
 Here's some fake lines            
 with a lot of trailing spaces after each.                   
 EOL
-    assert_equal("Here's some fake lines\nwith a lot of trailing spaces after each.\n", cmd.execute(input, context))
-    assert_equal(:replace_selection, context.output)
+    assert_equal("Here's some fake lines\nwith a lot of trailing spaces after each.\n", execute(input))
+    assert_output_type(:replace_selection)
   end
 end

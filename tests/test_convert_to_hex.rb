@@ -8,7 +8,7 @@ class ConvertToHexTest < CommandTestCase
   end
   
   def test_14
-    assert_equal("0x31 0x34", cmd.execute("14", context))
-    assert_equal(:replace_selection, context.output)
+    assert_equal("0x31 0x34", execute("14"))
+    assert_output_type(:replace_selection)
   end
 end

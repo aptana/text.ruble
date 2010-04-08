@@ -8,7 +8,7 @@ class MoveToEOLAndInsertPeriodTest < CommandTestCase
   end
   
   def test_insert_period
-    assert_equal("end of line.", cmd.execute("end of line", context))
-    assert_equal(:replace_selection, context.output)
+    assert_equal("end of line.", execute("end of line"))
+    assert_output_type(:replace_selection)
   end
 end

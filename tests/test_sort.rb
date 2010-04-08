@@ -1,16 +1,10 @@
-require 'test/unit'
+require 'command_testcase'
 require 'sort'
 
-class SortTest < Test::Unit::TestCase
+class SortTest < CommandTestCase
   
-  def setup
-    @cmd = $commands['Sort Lines in Document / Selection']
-    @context = CommandContext.new
-  end
-  
-  def teardown
-    @cmd = nil
-    @context = nil
+  def command_name
+    'Sort Lines in Document / Selection'
   end
   
   def test_sort
@@ -22,7 +16,7 @@ a
 [
 ,
 EOL
-    assert_equal(",\n1\n3\n[\na\nx\n", @cmd.execute(input, @context))
-    assert_equal(:replace_selection, @context.output)
+    assert_equal(",\n1\n3\n[\na\nx\n", execute(input))
+    assert_output_type(:replace_selection)
   end
 end

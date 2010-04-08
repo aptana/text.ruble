@@ -16,9 +16,9 @@ There's not too many here.
 
 Oh well.
 EOL
-    result = cmd.execute(input, context)
+    result = execute(input)
     assert_not_equal(input, result)
-    assert_equal(:replace_selection, context.output)
+    assert_output_type(:replace_selection)
     result_lines = result.lines.to_a
     assert_equal(input.lines.to_a.size, result_lines.size)
     result_lines.each do |line|

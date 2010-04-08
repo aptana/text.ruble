@@ -20,7 +20,7 @@ a
 z
 a
 EOL
-    assert_equal(",\n1\n3\n[\na\nx\nz\n", cmd.execute(input, context))
-    assert_equal(:replace_selection, context.output)
+    assert_equal(",\n1\n3\n[\na\nx\nz\n", execute(input))
+    assert_output_type(:replace_selection)
   end
 end

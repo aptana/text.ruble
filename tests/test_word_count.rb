@@ -16,7 +16,7 @@ There's not too many here.
 
 Oh well.
 EOL
-    assert_equal("          7 lines\n         15 words\n         86 bytes\n", cmd.execute(input, context))
-    assert_equal(:show_as_tooltip, context.output)
+    assert_equal("          7 lines\n         15 words\n         86 bytes\n", execute(input))
+    assert_output_type(:show_as_tooltip)
   end
 end
