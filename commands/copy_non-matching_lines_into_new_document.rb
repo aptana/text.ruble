@@ -8,7 +8,7 @@ command 'Copy Non-Matching Lines into New Document' do |cmd|
     context.exit_discard unless res
     res = res.to_s
     # Now go through every line in STDIN and print all non-matches!
-    STDIN.readlines.each {|line| puts line if !line.match(res) }
+    $stdin.readlines.each {|line| puts line if !line.match(res) }
     nil
   end
 end
