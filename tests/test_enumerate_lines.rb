@@ -2,6 +2,17 @@ require 'test/unit'
 require 'enumerate_lines'
 
 class EnumerateLinesTest < Test::Unit::TestCase
+  
+  def setup
+    @cmd = $commands['Add Line Numbers to Document / Selection']
+    @context = CommandContext.new
+  end
+  
+  def teardown
+    @cmd = nil
+    @context = nil
+  end
+  
   def test_enumerate_lines
     input =<<EOL
 Testing that we append 
@@ -31,7 +42,7 @@ EOL
       11  try to get
       12  more than 10.
 EOL
-    cmd = $commands['Add Line Numbers to Document / Selection']
-    assert_equal(expected, cmd.execute(input))
+    assert_equal(expected, @cmd.execute(input, @context))
+    assert_equal(:replace_selection, @context.output)
   end
 end

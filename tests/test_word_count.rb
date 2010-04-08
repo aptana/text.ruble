@@ -1,16 +1,10 @@
-require 'test/unit'
+require 'command_testcase'
 require 'word_count'
 
-class WordCountTest < Test::Unit::TestCase
+class WordCountTest < CommandTestCase
   
-  def setup
-    @cmd = $commands['Statistics for Document / Selection (Word Count)']
-    @context = CommandContext.new
-  end
-  
-  def teardown
-    @cmd = nil
-    @context = nil
+  def command_name
+    'Statistics for Document / Selection (Word Count)'
   end
   
   def test_word_count
@@ -22,7 +16,7 @@ There's not too many here.
 
 Oh well.
 EOL
-    assert_equal("          7 lines\n         15 words\n         86 bytes\n", @cmd.execute(input, @context))
-    assert_equal(:show_as_tooltip, @context.output)
+    assert_equal("          7 lines\n         15 words\n         86 bytes\n", cmd.execute(input, context))
+    assert_equal(:show_as_tooltip, context.output)
   end
 end

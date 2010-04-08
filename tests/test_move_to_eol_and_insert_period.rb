@@ -1,9 +1,14 @@
-require 'test/unit'
+require 'command_testcase'
 require 'move_to_eol_and_insert_period'
 
-class MoveToEOLAndInsertPeriodTest < Test::Unit::TestCase
+class MoveToEOLAndInsertPeriodTest < CommandTestCase
+  
+  def command_name
+    'Move to EOL and Insert "."'
+  end
+  
   def test_insert_period
-    cmd = $commands['Move to EOL and Insert "."']
-    assert_equal("end of line.", cmd.execute("end of line"))
+    assert_equal("end of line.", cmd.execute("end of line", context))
+    assert_equal(:replace_selection, context.output)
   end
 end

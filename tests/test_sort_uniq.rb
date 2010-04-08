@@ -1,7 +1,12 @@
-require 'test/unit'
+require 'command_testcase'
 require 'sort_uniq'
 
-class SortUniqTest < Test::Unit::TestCase
+class SortUniqTest < CommandTestCase
+  
+  def command_name
+    'Sort Lines & Remove Duplicates'
+  end
+  
   def test_sort_uniq
     input =<<EOL
 1
@@ -15,7 +20,7 @@ a
 z
 a
 EOL
-    cmd = $commands['Sort Lines & Remove Duplicates']
-    assert_equal(",\n1\n3\n[\na\nx\nz\n", cmd.execute(input))
+    assert_equal(",\n1\n3\n[\na\nx\nz\n", cmd.execute(input, context))
+    assert_equal(:replace_selection, context.output)
   end
 end

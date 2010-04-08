@@ -1,21 +1,15 @@
-require 'test/unit'
+require 'command_testcase'
 require 'copy_non-matching_lines_into_new_document'
 
-class CopyNonMatchingLinesIntoNewDocumentTest < Test::Unit::TestCase
+class CopyNonMatchingLinesIntoNewDocumentTest < CommandTestCase
   
-  def setup
-    @cmd = $commands['Copy Non-Matching Lines into New Document']
-    @context = CommandContext.new
-  end
-  
-  def teardown
-    @cmd = nil
-    @context = nil
+  def command_name
+    'Copy Non-Matching Lines into New Document'
   end
   
   def test_nil
-    assert_equal(nil, @cmd.execute("", @context))
-    assert_equal(:discard, @context.output)
+    assert_equal(nil, cmd.execute("", context))
+    assert_equal(:discard, context.output)
   end
   
   def test_pattern
@@ -32,7 +26,7 @@ EOL
 Bogus!
 EOL
     Ruble::UI.add_string_for_request("Th*")
-    assert_equal(expected, @cmd.execute(input, @context)) 
-    assert_equal(:create_new_document, @context.output)  
+    assert_equal(expected, cmd.execute(input, context)) 
+    assert_equal(:create_new_document, context.output)  
   end
 end

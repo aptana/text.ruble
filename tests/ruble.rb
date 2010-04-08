@@ -49,13 +49,13 @@ class Command
   end
   
   def execute(input, context = CommandContext.new)
+    context.output = output.first if context
     if invoke.kind_of? Proc
       require 'stringio'
       
       block = invoke
       $stdin = StringIO.new(input || "")
       $stdout = StringIO.new
-      context.output = output.first if context
       begin
         result = block.call(context)
         result || $stdout.string
