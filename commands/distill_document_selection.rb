@@ -8,7 +8,7 @@ command 'Distill Document / Selection' do |cmd|
     context.exit_discard unless res
     res = res.to_s    
     # FIXME Not sure, but looks like the original command sent matching lines to a new file, and replaced existing doc with non-matching...
-    STDIN.readlines.each {|line| puts line if line.match(res) }
+    $stdin.readlines.each {|line| puts line if line.match(res) }
     nil
   end
 end
