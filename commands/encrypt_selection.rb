@@ -13,7 +13,7 @@ command 'AES Encrypt Document / Selection With Password...' do |cmd|
     context.exit_show_tool_tip 'Password mismatch! Please play again.' unless pw == pw2
     cmd_line = "openssl enc -e -aes128 -base64 -pass \"pass:#{pw}\""
     result = IO.popen(cmd_line, 'r+') do |io|
-      io.write STDIN.read
+      io.write $stdin.read
       io.close_write
       io.read
     end
