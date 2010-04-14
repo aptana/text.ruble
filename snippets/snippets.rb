@@ -1,3 +1,5 @@
+require 'ruble'
+
 command 'Copyright Notice' do |s|
   s.trigger = 'c)'
   s.input = :none
