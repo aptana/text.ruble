@@ -25,4 +25,7 @@ class CommandTestCase < Test::Unit::TestCase
     assert_equal(type, @context.output)
   end
   
+  # Override the method so it doesn't fail in this base class
+  def default_test
+  end
 end
