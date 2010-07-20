@@ -44,6 +44,8 @@ END
     main_menu.command 'Duplicate Line / Selection'
     main_menu.command 'Join Lines'
     main_menu.separator
+    main_menu.command "Execute Selection/Line Inserting Results"
+    main_menu.separator
     main_menu.command 'Add Line Numbers to Document / Selection'
     main_menu.command 'Statistics for Document / Selection (Word Count)'
     main_menu.separator
