@@ -1,5 +1,6 @@
 require 'java'
 require 'ruble'
+require 'ruble/platform'
 
 bundle do |bundle|
   bundle.author = 'Christopher Williams'
@@ -52,6 +53,6 @@ END
     main_menu.command 'Copyright Notice'
     main_menu.command 'Current Date - YYYY-MM-DD'
     main_menu.command 'Lorem ipsum'
-    main_menu.command 'Speak Document / Selection'
+    main_menu.command 'Speak Document / Selection' unless Ruble.is_windows?
   end
 end
