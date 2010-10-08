@@ -1,5 +1,4 @@
 require 'ruble'
-require 'escape'
 
 command 'Delete Line' do |cmd|
   cmd.key_binding = 'CONTROL+M2+K'
