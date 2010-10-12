@@ -56,3 +56,6 @@ END
     main_menu.command 'Speak Document / Selection' unless Ruble.is_windows?
   end
 end
+
+# Default set of character pairs
+smart_typing_pairs[""] = ['"', '"', '(', ')', '{', '}', '[', ']', 'Ò', 'Ó', 'Ô', 'Õ']
