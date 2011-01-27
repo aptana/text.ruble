@@ -220,8 +220,8 @@ children:
   scope: null
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-c761d9bf-1bf5-418b-a7e6-957a3066c698
-  pairs: [&id002 '"', *id002, (, ), '{', '}', '[', ']', “, ”, ‘, ’]
+  displayName: smart_typing_pairs-19fad856-0c94-4f0e-86b9-d0eb8b3d9296
+  pairs: [&id002 '"', *id002, (, ), '{', '}', '[', ']']
   path: bundle.rb
   scope: ''
 - !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
@@ -495,7 +495,7 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-copyright: ¬© Copyright 2010 Aptana Inc. Distributed under the MIT license.
+copyright: Copyright 2010 Aptana Inc. Distributed under the MIT license.
 customProperties: null
 decreaseIndentMarkers: &id003 {}
 description: 'A port of the TextMate bundle.
