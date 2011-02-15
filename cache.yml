@@ -220,15 +220,15 @@ children:
   scope: null
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-f2f3fe4f-0a41-4ccd-b66c-4a951b930eff
+  displayName: smart_typing_pairs-12ee8240-63bb-4453-a37e-243225ce36aa
   pairs: [&id002 '"', *id002, (, ), '{', '}', '[', ']']
   path: bundle.rb
   scope: ''
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Transliterate Word / Selection to ASCII
-  input: [selection, word]
+  input: []
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -237,11 +237,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Convert Character / Selection to Hex
-  input: [selection, right_character]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+M2+X]
@@ -251,11 +251,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Copy Matching Lines into New Document
-  input: [document]
+  input: []
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -264,11 +264,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Copy Non-Matching Lines into New Document
-  input: [document]
+  input: []
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -277,11 +277,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: AES Decrypt Document / Selection With Password...
-  input: [selection, document]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+COMMAND+E]
@@ -291,11 +291,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Delete Line
-  input: [none]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+M2+K]
@@ -305,11 +305,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Delete to Beginning of Line
-  input: [none]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [COMMAND+BACKSPACE]
@@ -319,11 +319,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Distill Document / Selection
-  input: [document]
+  input: []
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -332,11 +332,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Duplicate Line / Selection
-  input: [selection, none]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+M2+D]
@@ -346,11 +346,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: AES Encrypt Document / Selection With Password...
-  input: [selection, document]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+COMMAND+E]
@@ -360,11 +360,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Add Line Numbers to Document / Selection
-  input: [selection, document]
+  input: []
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -373,11 +373,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Execute Selection/Line Inserting Results
-  input: [selection, line]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CTRL+R]
@@ -387,11 +387,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Smaller
-  input: [none]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+-]
@@ -401,11 +401,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Bigger
-  input: [none]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+=]
@@ -415,11 +415,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Join Lines
-  input: [none]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+M2+J]
@@ -429,11 +429,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Move to EOL and Insert "."
-  input: [line]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [OPTION+COMMAND+ENTER]
@@ -443,11 +443,11 @@ children:
   runType: current_thread
   scope: text
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Move to EOL and Insert "." + LF
-  input: [line]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [SHIFT+COMMAND+ENTER]
@@ -457,11 +457,11 @@ children:
   runType: current_thread
   scope: text
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Randomize Lines in Document / Selection
-  input: [selection, document]
+  input: []
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -470,39 +470,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Sort Lines in Document / Selection
-  input: [selection, document]
-  inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [F6]
-  outputPath: null
-  outputType: replace_selection
-  path: commands/sort.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Sort Lines & Remove Duplicates
-  input: [selection, document]
-  inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [F6]
-  outputPath: null
-  outputType: replace_selection
-  path: commands/sort_uniq.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Speak Document / Selection
-  input: [selection, document]
+  input: []
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -511,11 +483,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Remove Unprintable Characters in Document / Selection
-  input: [selection, document]
+  input: []
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -524,11 +496,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Remove Trailing Spaces in Document / Selection
-  input: [selection, document]
+  input: []
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -537,11 +509,11 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Statistics for Document / Selection (Word Count)
-  input: [selection, document]
+  input: []
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+M2+N]
@@ -551,12 +523,12 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties:
     prefix_values: [c)]
   displayName: Copyright Notice
-  input: [none]
+  input: []
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -565,12 +537,12 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties:
     prefix_values: [isoD]
   displayName: Current Date - YYYY-MM-DD
-  input: [none]
+  input: []
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -594,9 +566,22 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Sort Lines in Document / Selection
+  input: [selection, document]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: replace_selection
+  path: commands/sort.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 copyright: Copyright 2010 Aptana Inc. Distributed under the MIT license.
 customProperties: null
-decreaseIndentMarkers: &id003 {}
+decreaseIndentMarkers: {}
 description: 'A port of the TextMate bundle.
 
 
@@ -605,11 +590,11 @@ description: 'A port of the TextMate bundle.
 
   '
 displayName: Text
-fileTypeRegistry: *id003
-fileTypes: *id001
-foldingStartMarkers: *id003
-foldingStopMarkers: *id003
-increaseIndentMarkers: *id003
+fileTypeRegistry: {}
+fileTypes: []
+foldingStartMarkers: {}
+foldingStopMarkers: {}
+increaseIndentMarkers: {}
 license: null
 licenseUrl: null
 path: bundle.rb
