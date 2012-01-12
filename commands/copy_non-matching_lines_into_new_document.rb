@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Copy Non-Matching Lines into New Document' do |cmd|
+command t(:copy_non_matching_lines) do |cmd|
   cmd.output = :create_new_document
   cmd.input = :document
   cmd.invoke do |context|

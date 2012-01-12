@@ -1,7 +1,6 @@
 require 'ruble'
-require 'escape'
 
-command 'Join Lines' do |cmd|
+command t(:join_lines) do |cmd|
   cmd.key_binding = 'CONTROL+M2+J'
   cmd.output = :discard
   cmd.input = :none

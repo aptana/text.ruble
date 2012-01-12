@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Remove Unprintable Characters in Document / Selection' do |cmd|
+command t(:remove_unprintable) do |cmd|
   cmd.output = :replace_selection
   cmd.input = :selection, :document
   cmd.invoke do

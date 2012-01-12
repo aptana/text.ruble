@@ -1,7 +1,7 @@
 require 'ruble'
 
 # FIXME This probably won't work on windows
-command 'Transliterate Word / Selection to ASCII' do |cmd|
+command t(:transliterate_to_ascii) do |cmd|
   cmd.output = :replace_selection
   cmd.input = :selection, :word
   cmd.invoke =<<-EOF

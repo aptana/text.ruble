@@ -1,6 +1,6 @@
 require 'ruble'
 # FIXME Won't work on Windows, or Ubuntu. Run 'espeak' on Ubuntu!
-command 'Speak Document / Selection' do |cmd|
+command t(:speak) do |cmd|
   cmd.output = :discard
   cmd.input = :selection, :document
   cmd.invoke do

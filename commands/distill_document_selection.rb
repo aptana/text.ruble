@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Distill Document / Selection' do |cmd|
+command t(:distill) do |cmd|
   cmd.output = :replace_selection
   cmd.input = :document
   cmd.invoke do |context|

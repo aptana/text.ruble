@@ -1,6 +1,6 @@
 require 'ruble'
 # FIXME Something is interfering so keybinding doesn't actually work (though the command works fine when run from menu)!
-command 'Delete to Beginning of Line' do |cmd|
+command t(:delete_to_beginning_of_line) do |cmd|
   cmd.key_binding = 'COMMAND+BACKSPACE'
   cmd.output = :discard
   cmd.input = :none

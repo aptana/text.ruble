@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Smaller' do |cmd|
+command t(:smaller) do |cmd|
   cmd.key_binding = 'M1+-'
   cmd.output = :discard
   cmd.input = :none

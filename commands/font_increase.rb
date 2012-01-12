@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Bigger' do |cmd|
+command t(:bigger) do |cmd|
   cmd.key_binding ='M1+M2+='
   cmd.output = :discard
   cmd.input = :none

@@ -1,6 +1,6 @@
 require 'ruble'
 
-command "Execute Selection/Line Inserting Results" do |cmd|
+command t(:execute_and_insert) do |cmd|
   cmd.key_binding = "CTRL+R"
   cmd.output = :insert_as_text
   cmd.input = [ :selection, :line ] 
