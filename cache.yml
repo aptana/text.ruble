@@ -214,7 +214,7 @@ children:
   scope: null
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-b3c2f215-945a-48e0-bee0-b63109ece088
+  displayName: smart_typing_pairs-e9732b80-c867-4460-b7a5-bbc3d533804b
   pairs: ['"', '"', (, ), '{', '}', '[', ']']
   path: bundle.rb
   scope: ''
