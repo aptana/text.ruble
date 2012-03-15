@@ -1,7 +1,7 @@
 require 'ruble'
 require 'ruble/ui'
 
-command 'AES Encrypt Document / Selection With Password...' do |cmd|
+command t(:aes_encrypt) do |cmd|
   cmd.key_binding = 'CONTROL+SHIFT+COMMAND+E'
   cmd.output = :replace_selection
   cmd.input = :selection, :document

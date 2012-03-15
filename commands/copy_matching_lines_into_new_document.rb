@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Copy Matching Lines into New Document' do |cmd|
+command t(:copy_matching_lines) do |cmd|
   cmd.output = :create_new_document
   cmd.input = :document
   cmd.invoke do |context|

@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Add Line Numbers to Document / Selection' do |cmd|
+command t(:add_line_numbers) do |cmd|
   cmd.output = :replace_selection
   cmd.input = :selection, :document
   cmd.invoke do

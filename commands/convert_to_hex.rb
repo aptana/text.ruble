@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Convert Character / Selection to Hex' do |cmd|
+command t(:convert_to_hex) do |cmd|
   cmd.key_binding = 'CONTROL+M2+X'
   cmd.output = :replace_selection
   cmd.input = :selection, :right_character
