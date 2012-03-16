@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Remove Trailing Spaces in Document / Selection' do |cmd|
+command t(:remove_trailing_spaces) do |cmd|
   cmd.output = :replace_selection
   cmd.input = :selection, :document
   cmd.invoke do

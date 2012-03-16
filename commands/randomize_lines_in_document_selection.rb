@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Randomize Lines in Document / Selection' do |cmd|
+command t(:randomize_lines) do |cmd|
   cmd.output = :replace_selection
   cmd.input = :selection, :document
   cmd.invoke do

@@ -1,6 +1,6 @@
 require 'ruble'
     
-command 'Move to EOL and Insert "." + LF' do |cmd|
+command t(:insert_period_and_newline_at_eol) do |cmd|
   cmd.key_binding = 'SHIFT+COMMAND+ENTER'
   cmd.scope = 'text'
   cmd.output = :replace_selection

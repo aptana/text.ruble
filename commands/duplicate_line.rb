@@ -1,7 +1,7 @@
 require 'ruble'
 require 'escape'
 
-command 'Duplicate Line / Selection' do |cmd|
+command t(:duplicate_line) do |cmd|
   cmd.key_binding = 'CONTROL+M2+D'
   cmd.output = :insert_as_text
   cmd.input = :selection, :none
