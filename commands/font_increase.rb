@@ -1,7 +1,7 @@
 require 'ruble'
 
 command t(:bigger) do |cmd|
-  cmd.key_binding ='M1+M2+='
+  cmd.key_binding ='M1+='
   cmd.output = :discard
   cmd.input = :none
   cmd.invoke do |context|
