@@ -22,7 +22,7 @@ command t(:word_count) do |cmd|
 
     counts = []
     
-    counts << (lines +1)
+    counts << (lines + 1)
     counts << words
     counts << bytes
 
